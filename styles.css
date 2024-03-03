@@ -1,0 +1,49 @@
+body{
+   margin: 0;
+   padding: 0;
+   
+}
+*{
+    font-family:sans-serif; 
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('s-group.png');
+    background-size: 100% 100%;
+}   
+.validate{
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}
+.form-input{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.head{
+    font-size: 35px;
+    font-weight: 600;
+}
+.input{
+    width: 300px;
+    height: 35px;
+    font-weight: 400;
+}
+.form-submit{
+    width: 310px;
+    height: 30px;
+    background-color: rgba(0, 0, 0,0.9);
+    color: aliceblue;
+    font-weight: 600;
+}
+.error{
+    border-color: rgb(251, 6, 6);
+}
+
