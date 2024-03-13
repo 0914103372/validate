@@ -5,24 +5,15 @@ const checkemail= /^\w+@+gmail\.com/
 const formsubmit = document.querySelector('.form-submit')
 formsubmit.addEventListener('click',()=>{
     let checkdata= (checkemail.test(email.value) && !(tendangnhap.value.length <= 6) && !(matkhau.value.length <= 6))
-    console.log(checkdata)
-    if(!checkemail.test(email.value))
-    
-    {
-        email.classList.add('error')
-    }
-    if(tendangnhap.value.length <= 6)
-    {
-        tendangnhap.classList.add('error')
-      
-    }
-    if(matkhau.value.length<= 6)
-    {
-        matkhau.classList.add('error')
-    }
+
     if(checkdata)
     {
         alert('Đăng Ký Thành Công')
+    }
+    else{
+        tendangnhap.classList.add('error')
+        email.classList.add('error')
+        matkhau.classList.add('error')
     }
 })
  email.addEventListener('click',()=>{
@@ -38,5 +29,31 @@ formsubmit.addEventListener('click',()=>{
 matkhau.addEventListener('click',()=>{
 
         matkhau.classList.remove('error')
+
+})
+email.addEventListener('blur',()=>{
+
+    if(!checkemail.test(email.value))
+    
+    {
+        email.classList.add('error')
+    }
+
+})
+tendangnhap.addEventListener('blur',()=>{
+
+    if(tendangnhap.value.length <= 6)
+    {
+        tendangnhap.classList.add('error')
+
+    }
+
+})
+matkhau.addEventListener('blur',()=>{
+
+    if(matkhau.value.length<= 6)
+    {
+        matkhau.classList.add('error')
+    }
 
 })
